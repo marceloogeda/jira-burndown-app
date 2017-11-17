@@ -5,15 +5,17 @@ import Typography from 'material-ui/Typography';
 
 class App extends Component {
   render() {
+    const { REACT_APP_TEAM_NAME } = process.env;
+
     return (
       <div>
         <AppBar position="static" color="default">
-        <Toolbar>
-          <Typography type="title" color="inherit">
-            Title
-          </Typography>
-        </Toolbar>
-      </AppBar>
+          <Toolbar>
+            <Typography type="title" color="inherit">
+              {REACT_APP_TEAM_NAME}
+            </Typography>
+          </Toolbar>
+        </AppBar>
       </div>
     );
   }
